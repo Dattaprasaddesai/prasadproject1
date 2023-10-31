@@ -1,0 +1,187 @@
+﻿student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git status
+On branch master
+
+
+No commits yet
+
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        CC_EXP_3.docx
+        CC_EXP_4.docx
+
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git config --global --list
+user.name=Dattaprasaddesai
+user.email=desaipundalik4@gmail.com
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git status
+On branch master
+
+
+No commits yet
+
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        CC_EXP_3.docx
+        CC_EXP_4.docx
+
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ touch .gitignore
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/student/Documents/Dance-Website1/.git/
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$  git add .
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git commit -m "initial commit"
+[master (root-commit) 6943d34] initial commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 CC_EXP_3.docx
+ create mode 100644 CC_EXP_4.docx
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git log
+commit 6943d340d779dd29a92880623db7146586db062d (HEAD -> master)
+Author: Dattaprasaddesai <desaipundalik4@gmail.com>
+Date:   Mon Oct 30 13:11:48 2023 +0530
+
+
+    initial commit
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$  git log --online
+fatal: unrecognized argument: --online
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$  git log --oneline
+6943d34 (HEAD -> master) initial commit
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$  git remote add origin https://github.com/Dattaprasaddesai/Dance-Website1.git
+error: remote origin already exists.
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git push origin master
+remote: Permission to Dattaprasaddesai/Dance-Website1.git denied to ranesoniya30.
+fatal: unable to access 'https://github.com/Dattaprasaddesai/Dance-Website1.git/': The requested URL returned error: 403
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ ^[[200~ ssh-keygen -t rsa -b 4096 -C "desaipundalik4@gmail.com"
+bash: $'\E[200~': command not found
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$  ssh-keygen -t rsa -b 4096 -C "desaipundalik4@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/student/.ssh/id_rsa):
+/c/Users/student/.ssh/id_rsa already exists.
+Overwrite (y/n)?
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$  ssh-keygen -t rsa -b 4096 -C "desaipundalik4@gmail.com"
+Generating public/private rsa key pair.
+
+
+Enter file in which to save the key (/c/Users/student/.ssh/id_rsa): /c/Users/student/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/student/.ssh/id_rsa
+Your public key has been saved in /c/Users/student/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:H+APR0RbIA9BpzJRp4aJhUNsaG/jONiPSLhIoHOyNlQ desaipundalik4@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|   +..oo*o*..    |
+|  o =o + X o     |
+| . o..= = +      |
+|.  E+  = o       |
+|+o.+ .  S o      |
+|*+= .    = .     |
+|=B +      o      |
+|=o. .            |
+|. .              |
++----[SHA256]-----+
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ ^C
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ cat  /c/Users/student/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD4qKqXD3KhGlDmb9/KBOL6DL+QDKbUo/L8RlCLmaT6MU7V7QyUKOXxjMCr/80w3UxqOpkb8HpO95KQNcXh3o7HrU5LDppOJ5HUx9nz7fiIH0xE2YHEWH9Q7tmx5ZK9vv3XLfs+fonKcIsxL5kZ8ssin5tgZD2XdIQiSCTahFNx32MJXsdSid00uOH9yJKLQyXn44p4tSBSnDAQ9GtRQIKlmvZDFLQn5seL22CI+ep35g3FoVyCJU4UBU/7opB/tT4gNpPzwurVdZLamEju4nQJSQMASrL6TF8TN96kwGWcFdgGHRXqC8C8gX3v50H8+1s692BeGMSju7fo6RxAN5fIBF5L2xGLWifhAPAV1gl7fFFPj/jCENiCAt+FQMgREn30Xp5k+RWFPAs5LLdPcYD0YZpcJVMm9CJSn+/z1I7CrXFW7ISwLYnAFcJxtsApMCfN6ObxA4autmlKikKuHgP0b6yvSOmaoQMTptmQ0OUTxwCc79PoVXQMHp5o9cSjpj3kiTs7eGTxJx74W1LSJSb32go5TGzLssDzzGO/2aC2gwMsn7r2f3gMYomcL9wuKXfi2QzJLfPYj3iAlBX2bxENB6FMMG2LlAfFNThSwG/tjrQL28ovmiK3FJQt5A6gCJrVjz42BBl12XYRlabHUS+Zd/eBDNim5lBxLnk7xgoPMQ== desaipundalik4@gmail.com
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ ^C
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ ^C
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git push origin master
+remote: Permission to Dattaprasaddesai/Dance-Website1.git denied to ranesoniya30.
+fatal: unable to access 'https://github.com/Dattaprasaddesai/Dance-Website1.git/': The requested URL returned error: 403
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ ^C
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 2.53 MiB | 1.75 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Dattaprasaddesai/Dance-Website1.git
+ * [new branch]      master -> master
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$ git push origin master
+Everything up-to-date
+
+
+student@IT086 MINGW64 ~/Documents/Dance-Website1 (master)
+$
